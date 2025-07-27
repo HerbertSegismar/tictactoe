@@ -49,23 +49,24 @@ button {
 }
 
 #gameboard {
-    width: 302px;
-    height: 302px;
+    width: 300px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.8);
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .square {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid rgb(53, 14, 133);
     background-color:burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .Circle {
