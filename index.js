@@ -24,9 +24,6 @@ function createBoard() {
     squareElement.addEventListener("click", handleClick);
     gameboard.append(squareElement);
   });
-
-  turn = "Circle";
-  info.textContent = `${turn}'s turn`;
 }
 
 function handleClick(square) {
@@ -37,7 +34,7 @@ function handleClick(square) {
   competingElement.classList.add(turn);
   squareElement.append(competingElement);
 
-  // Remove event listener after click (with semicolon)
+  // Remove event listener after click
   squareElement.removeEventListener("click", handleClick);
 
   turn = turn === "Circle" ? "Cross" : "Circle";
@@ -90,17 +87,6 @@ function endGame(message) {
   resetBtn.textContent = "Play Again";
   resetBtn.id = "reset-btn";
   resetBtn.addEventListener("click", createBoard);
-
-  resetBtn.style.cssText = `
-        margin-top: 15px;
-        padding: 8px 16px;
-        font-size: 1rem;
-        cursor: pointer;
-        background: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-    `;
 
   const oldBtn = document.getElementById("reset-btn");
   if (oldBtn) oldBtn.remove();
