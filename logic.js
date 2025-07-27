@@ -21,5 +21,6 @@ function handleClick (square) {
     turn = turn === "Circle" ? "Cross" : "Circle";
     square.target.append(competingElement);
     info.textContent = `${turn}'s turn`;
+    square.target.removeEventListener("click", handleClick);
 }
 
