@@ -14,15 +14,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
     font-family: Oswald, sans-serif;
     color: chocolate;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0px;
+    text-align: center;
+    color: oklch(0 0 0 / 0.75);
 }
 
 p {
     font-size: 2rem;
     text-align: center;
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 #gameboard {
@@ -30,7 +37,6 @@ p {
     height: 302px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     border: 1px solid black;
 }
 
