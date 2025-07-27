@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +11,18 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    font-family: Oswald, sans-serif;
+    color: chocolate;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5px;
 }
 
 #gameboard {
@@ -32,7 +44,7 @@ body {
     align-items: center;
 }
 
-.circle {
+.Circle {
     width: 90px;
     height: 90px;
     border: 30px solid purple;
@@ -40,7 +52,7 @@ body {
     background-color: burlywood;
 }
 
-.cross {
+.Cross {
     width: 90px;
     height: 90px;
     background-color: crimson;
