@@ -1,7 +1,10 @@
 const gameboard = document.getElementById("gameboard");
 const info = document.getElementById("info");
+const oScore = document.getElementById("o-score");
+const xScore = document.getElementById("x-score");
 const board = Array(9).fill(null);
 let turn = "Circle";
+let scores = { Circle: 0, Cross: 0 }; // Track scores for both players
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -55,11 +58,15 @@ function checkWinner() {
   };
 
   if (checkWinningPlayer("Circle")) {
+    scores.Circle++; // Increment Circle's score
+    updateScores();
     endGame("Circle wins!");
     return;
   }
 
   if (checkWinningPlayer("Cross")) {
+    scores.Cross++; // Increment Cross's score
+    updateScores();
     endGame("Cross wins!");
     return;
   }
@@ -74,6 +81,11 @@ function checkWinner() {
   if (allSquaresFilled) {
     endGame("It's a Draw!");
   }
+}
+
+function updateScores() {
+  oScore.textContent = "O: " + scores.Circle;
+  xScore.textContent = "X: " + scores.Cross;
 }
 
 function endGame(message) {
